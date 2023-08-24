@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Dashboard from "@/public/dashboard_example.png";
+import { PiArrowRightBold } from "react-icons/pi";
 
 function Hero() {
   return (
@@ -14,7 +15,7 @@ function Hero() {
             href=""
             className="bg-palette-700 text-2xl text-neutral-200 font-semibold p-4 rounded-md"
           >
-            Get Started
+            Get Started <PiArrowRightBold className="inline-block" />
           </a>
         </button>
       </div>
@@ -23,7 +24,7 @@ function Hero() {
         <Image
           src={Dashboard}
           alt="Dashboard"
-          className="object-contain h-3/5 w-fit rounded-t-3xl shadow-[0px_0px_8rem_2rem_#C77DFF30]"
+          className="object-contain h-3/5 w-fit rounded-t-3xl shadow-[0px_0px_6rem_1rem_#C77DFF30]"
         />
       </div>
     </section>

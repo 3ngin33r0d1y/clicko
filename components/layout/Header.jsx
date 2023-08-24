@@ -8,7 +8,7 @@ function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > window.innerHeight) {
+      if (window.scrollY <= window.innerHeight - 128) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -22,7 +22,9 @@ function Header() {
     <header
       className={`w-full h-20 px-8 flex items-center justify-between fixed z-50 ${bgColor} backdrop-filter backdrop-blur-sm bg-opacity-10`}
     >
-      <BrandText />
+      <a href="/" className="text-3xl">
+        <BrandText />
+      </a>
       <nav className="flex">
         <ul className="flex items-center space-x-6 px-6 text-neutral-500 font-medium">
           <li>
@@ -38,7 +40,7 @@ function Header() {
               href=""
               className="hover:text-palette-800 transition-all duration-300"
             >
-              Recources
+              Features
             </a>
           </li>
           <li>
