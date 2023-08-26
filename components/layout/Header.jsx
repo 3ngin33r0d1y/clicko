@@ -4,19 +4,25 @@ import BrandText from "./BrandText";
 import { useState, useEffect } from "react";
 
 function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+
+    window.addEventListener('scroll', handler, false);
+    window.addEventListener('onload', handler, false);
+
+    function handler() {
       if (window.scrollY <= window.innerHeight - 128) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
-    });
-  }, []);
+    }
+  });
 
   const bgColor = isScrolled ? "bg-palette-100" : "bg-palette-200";
+  const aboutColor = isScrolled ? "text-palette-800" : "text-neutral-500";
+  const featureColor = !isScrolled ? "text-palette-800" : "text-neutral-500";
 
   return (
     <header
@@ -29,16 +35,16 @@ function Header() {
         <ul className="flex items-center space-x-6 px-6 text-neutral-500 font-medium">
           <li>
             <a
-              href=""
-              className="text-palette-800 hover:text-palette-800 transition-all duration-300"
+              href="#hero"
+              className={`${aboutColor} hover:text-palette-800 transition-all duration-300`}
             >
               About
             </a>
           </li>
           <li>
             <a
-              href=""
-              className="hover:text-palette-800 transition-all duration-300"
+              href="#features"
+              className={`${featureColor} hover:text-palette-800 transition-all duration-300`}
             >
               Features
             </a>

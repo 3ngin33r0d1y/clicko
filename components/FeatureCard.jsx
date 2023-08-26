@@ -1,4 +1,4 @@
-function Feature({ icon, title, desc }) {
+function FeatureCard({ icon, title, desc }) {
   return (
     <div className="flex flex-col justify-center w-full md:w-1/3 p-16 hover:shadow-[0px_0px_20px_10px_#00000024]">
       <span>{icon}</span>
@@ -8,4 +8,4 @@ function Feature({ icon, title, desc }) {
   );
 }
 
-export default Feature;
+export default FeatureCard;

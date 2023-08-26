@@ -21,7 +21,10 @@ function Footer() {
               <a href="https://github.com/jhonataplt" target="_blank">
                 <BsGithub />
               </a>
-              <a href="https://www.linkedin.com/in/jhonatapolito/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/jhonatapolito/"
+                target="_blank"
+              >
                 <BsLinkedin />
               </a>
               <a href="mailto: jhonata.demuner@gmail.com">
@@ -48,15 +51,16 @@ function Footer() {
             </li>
           </ul>
           <div>
-            <p className="text-white text-lg font-bold pb-4">
-              © Copyright 2023{" "}
-              <span className="text-lg inline-block">
-                <BrandText />
-              </span>
-              .
-              <br />
+            <div className="text-white text-lg font-bold pb-4">
+              <div className="flex">
+                © Copyright 2023
+                <span className="text-lg pl-2">
+                  <BrandText />
+                </span>
+                .
+              </div>
               All rights reserved.
-            </p>
+            </div>
             <a href="" className="text-neutral-300 text-md">
               Terms & Privacy
             </a>

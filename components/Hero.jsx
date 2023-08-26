@@ -4,7 +4,7 @@ import { PiArrowRightBold } from "react-icons/pi";
 
 function Hero() {
   return (
-    <section className="flex flex-col justify-between items-center h-screen w-full relative">
+    <section className="flex flex-col justify-between items-center h-screen w-full relative" id="hero">
       <div className="flex flex-col items-center justify-centerp pt-[6rem]">
         <p className="text-white text-6xl font-bold max-w-6xl text-center py-6 leading-tight">
           Click monitoring to give you all{" "}
